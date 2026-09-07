@@ -1,0 +1,22 @@
+# Terraform working directory
+.terraform/
+
+# Terraform state
+*.tfstate
+*.tfstate.*
+
+# Terraform variable files containing potential secrets
+*.tfvars
+
+# Terraform plans
+*.tfplan
+
+# Terraform crash logs
+crash.log
+crash.*.log
+
+# macOS
+.DS_Store
+
+# VS Code local settings
+.vscode/
