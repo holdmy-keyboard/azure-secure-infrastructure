@@ -20,3 +20,20 @@ variable "environment" {
   type        = string
   default     = "dev"
 }
+
+variable "vnet_address_space" {
+  description = "Address space used by the Azure Virtual Network"
+  type        = list(string)
+  default     = ["10.10.0.0/16"]
+}
+
+variable "web_subnet_prefix" {
+  description = "Address range used by the web subnet"
+  type        = list(string)
+  default     = ["10.10.1.0/24"]
+}
+
+variable "admin_ip_cidr" {
+  description = "Public IP address allowed to connect through SSH"
+  type        = string
+}
