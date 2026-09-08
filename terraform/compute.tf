@@ -36,6 +36,10 @@ resource "azurerm_linux_virtual_machine" "web" {
   admin_username                  = var.admin_username
   disable_password_authentication = true
 
+  identity {
+    type = "SystemAssigned"
+  }
+
   network_interface_ids = [
     azurerm_network_interface.web.id
   ]

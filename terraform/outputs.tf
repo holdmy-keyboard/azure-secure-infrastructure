@@ -46,3 +46,13 @@ output "ssh_command" {
   description = "SSH command used to connect to the Linux VM"
   value       = "ssh -i ~/.ssh/azure_secure_infra ${var.admin_username}@${azurerm_public_ip.web.ip_address}"
 }
+
+output "log_analytics_workspace_name" {
+  description = "Name of the Log Analytics Workspace"
+  value       = azurerm_log_analytics_workspace.main.name
+}
+
+output "data_collection_rule_name" {
+  description = "Name of the Azure Monitor Data Collection Rule"
+  value       = azurerm_monitor_data_collection_rule.linux.name
+}
