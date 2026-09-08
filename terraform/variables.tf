@@ -6,7 +6,7 @@ variable "subscription_id" {
 variable "location" {
   description = "Azure region where resources will be deployed"
   type        = string
-  default     = "Germany West Central"
+  default     = "Central US"
 }
 
 variable "project_name" {
@@ -36,4 +36,22 @@ variable "web_subnet_prefix" {
 variable "admin_ip_cidr" {
   description = "Public IP address allowed to connect through SSH"
   type        = string
+}
+
+variable "vm_size" {
+  description = "Azure VM size used by the web server"
+  type        = string
+  default     = "Standard_B2pts_v2"
+}
+
+variable "admin_username" {
+  description = "Administrator username for the Linux VM"
+  type        = string
+  default     = "azueruser"
+}
+
+variable "ssh_public_key_path" {
+  description = "Path to the SSH public key used for VM authentication"
+  type        = string
+  default     = "~/.ssh/azure_secure_infra.pub"
 }
