@@ -55,3 +55,9 @@ variable "ssh_public_key_path" {
   type        = string
   default     = "~/.ssh/azure_secure_infra.pub"
 }
+
+variable "alert_email" {
+  description = "Email address that receives Azure Monitor alert notifications"
+  type        = string
+  sensitive   = true
+}

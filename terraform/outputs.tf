@@ -56,3 +56,13 @@ output "data_collection_rule_name" {
   description = "Name of the Azure Monitor Data Collection Rule"
   value       = azurerm_monitor_data_collection_rule.linux.name
 }
+
+output "action_group_name" {
+  description = "Name of the Azure Monitor Action Group"
+  value       = azurerm_monitor_action_group.main.name
+}
+
+output "high_cpu_alert_name" {
+  description = "Name of the high CPU Azure Monitor alert"
+  value       = azurerm_monitor_metric_alert.high_cpu.name
+}
